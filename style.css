@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nav {
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.logo-sec {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+.right-side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 14px;
+}
+.right-side a {
+  padding: 10px 20px;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: black;
+}
+#home {
+  background: linear-gradient(
+    135deg,
+    white 80%,
+    rgba(0, 0, 255, 0.5),
+    rgba(128, 0, 128, 0.7)
+  );
+  height: 100vh;
+  gap: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+#jj {
+  padding: 0.7em 1.8em;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 255, 0.8),
+    rgba(128, 0, 128, 0.5)
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 9px;
+  transition: 0.2s;
+}
+#jj:hover{
+    gap: 8px;
+}
+#opening {
+  display: flex;
+  font-size: 90px;
+  font-weight: bold;
+  gap: 14px;
+  align-items: center;
+  font-family: sans-serif;
+}
+#opening p {
+  background: linear-gradient(rgba(0, 0, 255, 0.9), rgba(128, 0, 128, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#sub{
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+#sub i, a{
+    color: gold;
+    font-size: 24px;
+}

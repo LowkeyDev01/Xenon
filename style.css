@@ -11,7 +11,7 @@ body {
 #nav {
   position: fixed;
   top: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   padding: 10px;
   width: 80%;
   display: grid;
@@ -40,13 +40,14 @@ body {
 }
 #home {
   background: linear-gradient(
-    135deg,
-    white 80%,
-    rgba(0, 0, 255, 0.5),
-    rgba(128, 0, 128, 0.7)
+    225deg,
+    white 25%,
+    rgba(0, 0, 255, 0.3),
+    rgba(128, 0, 128, 0.5)
   );
+
   height: 100vh;
-  gap: 24px;
+  gap: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,14 +69,14 @@ body {
   border-radius: 9px;
   transition: 0.2s;
 }
-#jj:hover{
-    gap: 8px;
+#jj:hover, #learn:hover {
+  gap: 8px;
 }
 #opening {
   display: flex;
   font-size: 90px;
   font-weight: bold;
-  gap: 14px;
+  gap: 20px;
   align-items: center;
   font-family: sans-serif;
 }
@@ -85,16 +86,34 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#sub{
-    font-size: 24px;
-    display: flex;
-    flex-direction: row;
-    font-family: sans-serif;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+#sub {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
-#sub i, a{
-    color: gold;
-    font-size: 24px;
+.action {
+  display: flex;
+  gap: 10px;
+}
+.action a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 24px;
+  background: blue;
+  transition: 0.4s;
+}
+#he{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

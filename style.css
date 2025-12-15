@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   scroll-behavior: smooth;
 }
 body {
@@ -13,7 +13,8 @@ body {
     225deg,
     white 0%,
     rgba(0, 0, 255, 0.3),
-    rgba(128, 0, 128, 0.5),
+    rgba(128, 0, 128, 0.6),
+    rgba(128, 0, 128, 0.7),
     rgba(128, 0, 128, 0.7)
   );
 }
@@ -33,9 +34,9 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  font-family: sans-serif;
   font-weight: bold;
-  color: rgba(128, 0, 128, 0.);
+  color: rgba(128, 0, 128, 0.9);
+  font-family: sans-serif;
   font-size: 34px;
 }
 .right-side {
@@ -47,7 +48,6 @@ body {
 .right-side a {
   padding: 10px 20px;
   font-size: 0.95em;
-  font-family: sans-serif;
   text-decoration: none;
   color: black;
 }
@@ -85,7 +85,6 @@ body {
   font-weight: bold;
   gap: 20px;
   align-items: center;
-  font-family: sans-serif;
 }
 .me {
   background: linear-gradient(rgba(0, 0, 255, 0.9), rgba(128, 0, 128, 0.9));
@@ -97,7 +96,6 @@ body {
   font-size: 24px;
   display: flex;
   flex-direction: row;
-  font-family: sans-serif;
   justify-content: center;
   align-items: center;
   gap: 5px;
@@ -125,10 +123,34 @@ body {
   gap: 20px;
 }
 #about {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100%;
 }
-#Pricing{
+#text {
+  width: 100%;
+  height: 20vh;
+  font-size: 55px;
+  line-height: 14px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+#meme {
+  height: 80vh;
+  position: relative;
+}
+#hh {
+  position: absolute;
+  bottom: 0;
+  right: 200px;
+  border-radius: 30px;
+  height: 100%;
+  width: 20%;
+}
+#Pricing {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,11 +158,11 @@ body {
   height: 100vh;
   width: 100%;
 }
-#FAQs{
-  height: 100vh;
+#FAQs {
+  height: 80vh;
   width: 100%;
 }
-.price{
+.price {
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 6fr 1fr;
@@ -149,7 +171,7 @@ body {
   background: rgba(255, 255, 255, 1);
   backdrop-filter: blur(10px);
 }
-#ss{
+#ss {
   height: 20vh;
   display: flex;
   align-items: center;
@@ -159,7 +181,7 @@ body {
   width: 100%;
   text-align: center;
 }
-#ms{
+#ms {
   gap: 100px;
   display: flex;
   justify-content: center;
@@ -167,7 +189,7 @@ body {
   width: 100%;
   height: 80vh;
 }
-#top{
+#top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,18 +197,60 @@ body {
   color: black;
   font-weight: bold;
 }
-#btnsec{
+#btnsec {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#btnsec a{
+#btnsec a {
   text-decoration: none;
   color: white;
 }
-#jje{
+#jje {
   padding: 0.5em 1.8em;
   border-radius: 8px;
   color: white;
-  background: linear-gradient(90deg, rgba(0, 0, 255, 0.767), rgba(128, 0, 128, 0.685));
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 0.767),
+    rgba(128, 0, 128, 0.685)
+  );
+}
+.box{
+  width: 350px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.349);
+  background-clip: blur(20px);
+  border-radius: 30px;
+}
+#one{
+  bottom: 0%;
+  left: 10%;
+}
+#two{
+  bottom: 0%;
+  left: 40%;
+}
+#cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+#three{
+  top: 5%;
+  left: 25%;
+}
+#ne{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  font-size: 22px;
+  background: linear-gradient(to right, blue, purple);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

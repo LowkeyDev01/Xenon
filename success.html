@@ -16,7 +16,7 @@
             <p id="me">Payment Succesful!</p>
             <p id="de">Here's your code:</p>
             <div id="cover">
-                <p id="code">sss</p>
+                <p id="code">Please wait...</p>
                 <i class="fa-solid fa-copy"></i>
             </div>
             <p id="status"></p>
@@ -26,12 +26,19 @@
         const code = document.getElementById('code');
         const params = new URLSearchParams(window.location.search);
         const reference = params.get('reference')
+        const role = params.get('role')
+
         async function codes() {
+            if (!reference || !role) {
+                document.getElementById('status').innerHTML = 'Invalid payment reference'
+                return;
+            }
+
             const URL = 'https://xenon-backend-w8bj.onrender.com/pay/verify'
             const pp = await fetch(URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ reference })
+                body: JSON.stringify({ reference, role })
             });
             const data = await pp.json()
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Succesful!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b381d2c4e3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <img src="check.png" height="100px" width="100px">
+            <p id="me">Payment Succesful!</p>
+            <p id="de">Here's your code:</p>
+            <div id="cover">
+                <p id="code">sss</p>
+                <i class="fa-solid fa-copy"></i>
+            </div>
+            <p id="status"></p>
+        </div>
+    </div>
+    <script>
+        const code = document.getElementById('code');
+        const params = new URLSearchParams(window.location.search);
+        const reference = params.get('reference')
+        async function codes() {
+            const URL = 'https://xenon-backend-w8bj.onrender.com/pay/verify'
+            const pp = await fetch(URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ reference })
+            });
+            const data = await pp.json()
+
+            if (data.error) {
+                document.getElementById('status').innerHTML = 'Payment Verification failed'
+                return;
+            }
+            document.getElementById('status').innerHTML = 'Payment Verified!'
+            code.textContent = data.code;
+            console.log(code.textContent)
+
+        }
+        codes();
+        const copyBtn = document.querySelector('.fa-copy');
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(code.textContent)
+            copyBtn.classList.remove('fa-copy')
+            copyBtn.classList.add('fa-check');
+
+            setTimeout(() => {
+                copyBtn.classList.remove('fa-check')
+                copyBtn.classList.add('fa-copy');
+            }, 3000)
+        })
+    </script>
+</body>
+
+</html>
